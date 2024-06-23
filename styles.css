@@ -1,0 +1,16 @@
+#mobile-nav-links {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.back_image {
+    background-image: linear-gradient(rgba(16, 34, 141, 0.6), rgba(19, 12, 122, 0.6)), url("/alra_images/background.png");
+}
+
+.bk_image {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/assets/fondo-cotizacion.jpg");
+}
