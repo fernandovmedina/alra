@@ -5,141 +5,566 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODUCTOS - ALRA PLASTIC</title>
     <link rel="stylesheet" href="output.css">
-    <link rel="icon" href="/drive/logo.png">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/drive/logo.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.9) 0%, rgba(5, 150, 105, 0.95) 100%);
+        }
+    </style>
   </head>
   <body>
-    <section>
-      <nav class="bg-white flex w-full py-5 px-10">
-          <div class="md:w-2/12 w-6/12">
-              <a href="index.html"><img src="/drive/logo.png" alt="logo" class="w-20" /></a>
-          </div>
-          <div class="md:hidden w-6/12 flex justify-end items-center">
-              <button id="menu-button" class="text-2xl">&#9776;</button>
-              <button id="close-button" class="text-2xl hidden">&times;</button>
-          </div>
-          <div class="hidden md:block md:w-6/12 my-auto text-right">
-              <div class="py-2">
-                  <a href="index.html" class="px-5 hover:underline hover:underline-offset-1">Inicio</a>
-                  <a href="productos.html" class="px-5 text-orange-600 hover:underline hover:underline-offset-1">Productos de Plastico</a>
-                  <a href="servicios.html" class="px-5 hover:underline hover:underline-offset-1">Servicios</a>
-              </div>
-              <div class="py-2">
-                  <a href="nosotros.html" class="px-5 hover:underline hover:underline-offset-1">Acerca de</a>
-                  <a href="contacto.html" class="px-5 hover:underline hover:underline-offset-1">Contacto</a>
-              </div>
-          </div>
-          <div class="hidden w-full flex flex-col my-auto md:hidden text-left" id="mobile-nav-links">
-              <a href="index.html" class="px-5">Inicio</a>
-              <a href="productos.html" class="px-5 text-orange-600">Productos de Plastico</a>
-              <a href="servicios.html" class="px-5">Servicios</a>
-              <a href="nosotros.html" class="px-5">Acerca de</a>
-              <a href="contacto.html" class="px-5">Contacto</a>
-          </div>
-          <div class="hidden md:block w-2/12 my-auto text-center">
-              <h1 class="text-xs font-bold">LUN - VIE 8AM - 5PM</h1>
-              <h3 class="text-xs font-light">+52 (844) 227 4808</h3>
-              <h3 class="text-xs font-light">+52 (844) 144 7725</h3>
-              <h3 class="text-xs font-light">+52 (844) 344 5808</h3>
-          </div>
-          <div class="hidden md:block w-2/12 my-auto text-right">
-              <a href="contacto.html" class="bg-green-400 hover:bg-green-600 py-2 px-3 rounded text-white text-sm font-bold">CONTACTANOS</a>
-          </div>
-      </nav>
-  </section>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="/drive/logo.png" alt="ALRA PLASTIC" class="h-16 w-auto">
+                </div>
 
-    <section class="w-full bg-gray-600 py-20">
-      <div class="md:w-1/2 px-5">
-        <h1
-          class="text-white font-extrabold text-4xl border-b-2 border-orange-500"
-        >
-          Catalogo de productos
-        </h1>
-        <p class="text-white pt-6 text-base">
-          Conoce nuestra amplia selección de productos hecha para mantener tu
-          producción siempre activa. Contamos con un gran stock y la posibilidad
-          de hacer envíos a todo México.
-        </p>
-      </div>
-      <div class="md:w-1/2"></div>
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-8">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-emerald-600 font-medium px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Inicio</a>
+                    <a href="productos.html"
+                        class="text-emerald-600 font-semibold px-3 py-2 rounded-lg bg-emerald-50">Productos</a>
+                    <a href="servicios.html"
+                        class="text-gray-700 hover:text-emerald-600 font-medium px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Servicios</a>
+                    <a href="nosotros.html"
+                        class="text-gray-700 hover:text-emerald-600 font-medium px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Acerca
+                        de</a>
+                    <a href="contacto.html"
+                        class="text-gray-700 hover:text-emerald-600 font-medium px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Contacto</a>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <div class="text-right">
+                        <p class="text-xs font-semibold text-gray-800">LUN - VIE 8AM - 5PM</p>
+                        <p class="text-xs text-gray-600">+52 (844) 227 4808</p>
+                    </div>
+                    <a href="contacto.html"
+                        class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-full font-semibold hover:from-emerald-600 hover:to-emerald-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                        Contáctanos
+                    </a>
+                </div>
+
+                <!-- Mobile menu buttons -->
+                <div class="lg:hidden">
+                    <!-- Menu button (hamburger) -->
+                    <button id="menu-button" class="p-2 rounded-lg text-gray-700 hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    
+                    <!-- Close button (X) -->
+                    <button id="close-button" class="hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-nav-links" class="hidden lg:hidden bg-white shadow-xl border-t">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html"
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Inicio</a>
+                <a href="productos.html"
+                    class="block text-emerald-600 font-semibold py-3 px-4 rounded-lg bg-emerald-50">Productos</a>
+                <a href="servicios.html"
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Servicios</a>
+                <a href="nosotros.html" 
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Acerca de</a>
+                <a href="contacto.html"
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Contacto</a>
+                
+                <!-- Contact info in mobile -->
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <div class="text-center mb-4">
+                        <p class="text-sm font-semibold text-gray-800">LUN - VIE 8AM - 5PM</p>
+                        <p class="text-sm text-gray-600">+52 (844) 227 4808</p>
+                    </div>
+                    <a href="contacto.html"
+                        class="block w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-full font-semibold text-center hover:from-emerald-600 hover:to-emerald-700 transition-all">
+                        Contáctanos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center overflow-hidden">
+        <!-- Background with overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800"></div>
+        <div class="absolute inset-0 bg-black/20"></div>
+        
+        <!-- Decorative elements -->
+        <div class="absolute top-20 right-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
+        <div class="absolute bottom-20 left-20 w-48 h-48 bg-emerald-400/20 rounded-full blur-2xl"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Content -->
+                <div class="text-white">
+                    <div class="inline-block px-4 py-2 bg-emerald-500/30 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
+                        ♻️ Productos Reciclados
+                    </div>
+                    <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Catálogo de
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-200 to-white">
+                            Productos
+                        </span>
+                    </h1>
+                    <p class="text-xl text-emerald-100 mb-8 leading-relaxed">
+                        Descubre nuestra amplia selección de productos plásticos reciclados de alta calidad. 
+                        Mantenemos tu producción activa con stock disponible y envíos a todo México.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#productos" class="inline-flex items-center px-8 py-4 bg-white text-emerald-700 font-bold rounded-full hover:bg-emerald-50 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                            Ver Productos
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <a href="contacto.html" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-emerald-700 transition-all duration-200">
+                            Solicitar Cotización
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Visual element -->
+                <div class="relative">
+                    <div class="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white/20 rounded-xl p-4 backdrop-blur-sm">
+                                <div class="w-12 h-12 bg-emerald-400 rounded-lg mb-3 flex items-center justify-center">
+                                    <span class="text-white font-bold text-xl">♻️</span>
+                                </div>
+                                <h3 class="text-white font-bold text-sm">HDPE</h3>
+                                <p class="text-emerald-200 text-xs">Inyección Molido</p>
+                            </div>
+                            <div class="bg-white/20 rounded-xl p-4 backdrop-blur-sm">
+                                <div class="w-12 h-12 bg-blue-400 rounded-lg mb-3 flex items-center justify-center">
+                                    <span class="text-white font-bold text-xl">🔄</span>
+                                </div>
+                                <h3 class="text-white font-bold text-sm">PP</h3>
+                                <p class="text-emerald-200 text-xs">Polipropileno</p>
+                            </div>
+                            <div class="bg-white/20 rounded-xl p-4 backdrop-blur-sm">
+                                <div class="w-12 h-12 bg-purple-400 rounded-lg mb-3 flex items-center justify-center">
+                                    <span class="text-white font-bold text-xl">🌱</span>
+                                </div>
+                                <h3 class="text-white font-bold text-sm">Stock</h3>
+                                <p class="text-emerald-200 text-xs">Disponible</p>
+                            </div>
+                            <div class="bg-white/20 rounded-xl p-4 backdrop-blur-sm">
+                                <div class="w-12 h-12 bg-orange-400 rounded-lg mb-3 flex items-center justify-center">
+                                    <span class="text-white font-bold text-xl">🚚</span>
+                                </div>
+                                <h3 class="text-white font-bold text-sm">Envíos</h3>
+                                <p class="text-emerald-200 text-xs">Todo México</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="px-3 mt-10 md:px-10 w-full">
-      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
-        <div class="border-2 border-gray-300 p-5 mb-10 mx-3 w-full flex items-center">
-          <div class="w-1/2">
-            <img src="/images/plastico1.png" alt="eva" class="mb-5" />
-          </div>
-          <div class="w-1/2">
-            <h1 class="font-bold">HDPE INYECCION MOLIDO MULTICOLOR</h1>
-          </div>
+    <!-- Products Section -->
+    <section id="productos" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium mb-4">
+                    Nuestros Productos
+                </div>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Materiales Plásticos Reciclados
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Ofrecemos una amplia gama de productos plásticos reciclados de la más alta calidad, 
+                    contribuyendo a un futuro más sostenible.
+                </p>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-xl flex items-center justify-center mr-4">
+                                <img src="/images/plastico1.png" alt="HDPE" class="w-12 h-12 object-contain" />
+                            </div>
+                            <div class="flex-1">
+                                <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full mb-2">
+                                    HDPE
+                                </span>
+                                <h3 class="font-bold text-gray-900 text-lg leading-tight">
+                                    HDPE Inyección Molido Multicolor
+                                </h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-6">
+                            Material ideal para inyección con excelentes propiedades mecánicas y versatilidad en aplicaciones industriales.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-emerald-600">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm font-medium">En Stock</span>
+                            </div>
+                            <button class="text-emerald-600 font-medium text-sm hover:text-emerald-700 transition-colors">
+                                Ver detalles →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mr-4">
+                                <img src="/images/plastico2.png" alt="HDPE Peletizado" class="w-12 h-12 object-contain" />
+                            </div>
+                            <div class="flex-1">
+                                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full mb-2">
+                                    HDPE
+                                </span>
+                                <h3 class="font-bold text-gray-900 text-lg leading-tight">
+                                    HDPE Peletizado Color Definido
+                                </h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-6">
+                            Pellets de HDPE con color específico, perfectos para procesos de extrusión y moldeo por inyección.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-emerald-600">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm font-medium">En Stock</span>
+                            </div>
+                            <button class="text-emerald-600 font-medium text-sm hover:text-emerald-700 transition-colors">
+                                Ver detalles →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl flex items-center justify-center mr-4">
+                                <img src="/images/plastico3.png" alt="PP Molido" class="w-12 h-12 object-contain" />
+                            </div>
+                            <div class="flex-1">
+                                <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full mb-2">
+                                    PP
+                                </span>
+                                <h3 class="font-bold text-gray-900 text-lg leading-tight">
+                                    Polipropileno Molido Color Definido
+                                </h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-6">
+                            Material molido de polipropileno con color específico, ideal para diversas aplicaciones industriales.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-emerald-600">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm font-medium">En Stock</span>
+                            </div>
+                            <button class="text-emerald-600 font-medium text-sm hover:text-emerald-700 transition-colors">
+                                Ver detalles →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl flex items-center justify-center mr-4">
+                                <img src="/images/plastico4.png" alt="PP Molido 2" class="w-12 h-12 object-contain" />
+                            </div>
+                            <div class="flex-1">
+                                <span class="inline-block px-3 py-1 bg-orange-100 text-orange-700 text-xs font-medium rounded-full mb-2">
+                                    PP
+                                </span>
+                                <h3 class="font-bold text-gray-900 text-lg leading-tight">
+                                    Polipropileno Molido Especial
+                                </h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-6">
+                            Polipropileno molido con características especiales para aplicaciones específicas de alta calidad.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-emerald-600">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm font-medium">En Stock</span>
+                            </div>
+                            <button class="text-emerald-600 font-medium text-sm hover:text-emerald-700 transition-colors">
+                                Ver detalles →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center mr-4">
+                                <img src="/images/plastico5.png" alt="HDPE Negro" class="w-12 h-12 object-contain" />
+                            </div>
+                            <div class="flex-1">
+                                <span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full mb-2">
+                                    HDPE
+                                </span>
+                                <h3 class="font-bold text-gray-900 text-lg leading-tight">
+                                    HDPE Pelletizado Negro
+                                </h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-6">
+                            Pellets de HDPE en color negro, perfectos para aplicaciones que requieren resistencia UV y durabilidad.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-emerald-600">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm font-medium">En Stock</span>
+                            </div>
+                            <button class="text-emerald-600 font-medium text-sm hover:text-emerald-700 transition-colors">
+                                Ver detalles →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more product placeholder -->
+                <div class="card-hover bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl shadow-lg overflow-hidden border-2 border-dashed border-emerald-300">
+                    <div class="p-8 text-center">
+                        <div class="w-20 h-20 bg-emerald-200 rounded-xl flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-10 h-10 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-emerald-800 text-lg mb-4">
+                            ¿Buscas algo específico?
+                        </h3>
+                        <p class="text-emerald-700 text-sm mb-6">
+                            Contáctanos para consultar disponibilidad de otros productos o especificaciones especiales.
+                        </p>
+                        <a href="contacto.html" class="inline-flex items-center px-6 py-3 bg-emerald-600 text-white font-medium rounded-full hover:bg-emerald-700 transition-colors">
+                            Consultar
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="border-2 border-gray-300 p-5 mb-10 mx-3 w-full flex items-center">
-          <div class="w-1/2">
-            <img src="/images/plastico2.png" alt="eva" class="mb-5" />
-          </div>
-          <div class="w-1/2">
-            <h1 class="font-bold">HDPE PELETIZADO COLOR DEFINIDO</h1>
-          </div>
-        </div>
-        <div class="border-2 border-gray-300 p-5 mb-10 mx-3 w-full flex items-center">
-          <div class="w-1/2">
-            <img src="/images/plastico3.png" alt="eva" class="mb-5" />
-          </div>
-          <div class="w-1/2">
-            <h1 class="font-bold">POLIPROPILENO MOLIDO COLOR DEFINIDO</h1>
-          </div>
-        </div>
-        <div class="border-2 border-gray-300 p-5 mb-10 mx-3 w-full flex items-center">
-          <div class="w-1/2">
-            <img src="/images/plastico4.png" alt="eva" class="mb-5" />
-          </div>
-          <div class="w-1/2">
-            <h1 class="font-bold">POLIPROPILENO MOLIDO COLOR DEFINIDO</h1>
-          </div>
-        </div>
-        <div class="border-2 border-gray-300 p-5 mb-10 mx-3 w-full flex items-center">
-          <div class="w-1/2">
-            <img src="/images/plastico5.png" alt="eva" class="mb-5" />
-          </div>
-          <div class="w-1/2">
-            <h1 class="font-bold">HDPE PELLETIZADO NEGRO</h1>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <footer class="w-full md:flex px-10 md:px-20 pb-10 md:items-center md:pt-10">
-      <div class="md:w-1/3 flex justify-center">
-          <img src="/drive/logo.png" alt="logo" class="w-28 md:w-36">
-      </div>
-      <div class="md:w-1/3 my-6 md:pl-10">
-          <h1 class="font-extrabold">MENU</h1>
-          <div class="flex flex-col">
-              <a href="index.html" class="font-light text-sm border-l-[1px] border-black mr-2">HOME</a>
-              <a href="nosotros.html" class="font-light text-sm border-l-[1px] border-black mr-2">NOSOTROS</a>
-              <a href="servicios.html" class="font-light text-sm border-l-[1px] border-black mr-2">SERVICIOS</a>
-              <a href="" class="font-light text-sm border-l-[1px] border-black mr-2">CONTACTO</a>
-          </div>
-      </div>
-      <div class="md:w-1/3">
-          <div class="flex py-1">
-              <img src="/assets/mas.png" alt="mas_imagen" class="w-6">
-              <h3>+52 (844) 144-7725</h3>
-          </div>
-          <div class="flex py-1">
-              <img src="/assets/mas.png" alt="mas_imagen" class="w-6">
-              <h3>info@alraplastic.com</h3>
-          </div>
-          <div class="flex py-1">
-              <img src="/assets/mas.png" alt="mas_imagen" class="w-6 my-auto h-6" />
-              <div>
-                  <h3>Paseo de los Encinos #305, Fracc. Torremolinos, C.P 25903, Ramos Arizpe, Coah.</h3>
-              </div>
-          </div>
-      </div>
-  </footer>
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-emerald-600 to-emerald-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-4xl font-bold text-white mb-6">
+                    ¿Listo para hacer tu pedido?
+                </h2>
+                <p class="text-xl text-emerald-100 mb-8">
+                    Contáctanos hoy mismo para obtener una cotización personalizada y descubrir cómo nuestros productos pueden beneficiar tu empresa.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contacto.html" class="inline-flex items-center px-8 py-4 bg-white text-emerald-700 font-bold rounded-full hover:bg-emerald-50 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        Solicitar Cotización
+                    </a>
+                    <a href="tel:+528442274808" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-emerald-700 transition-all duration-200">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        Llamar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="menu.js"></script>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Logo and description -->
+                <div class="col-span-1">
+                    <img src="/drive/logo.png" alt="ALRA PLASTIC" class="h-12 mb-6">
+                    <p class="text-gray-400 mb-6">
+                        Empresa orgullosamente mexicana especializada en la recolección, reciclaje y venta de productos plásticos.
+                    </p>
+                    <div class="flex space-x-4">
+                        <div class="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold">♻️</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">10 años</p>
+                            <p class="text-gray-400 text-sm">Reciclando</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu links -->
+                <div class="col-span-1">
+                    <h3 class="text-lg font-bold mb-6">Menú</h3>
+                    <div class="space-y-4">
+                        <a href="index.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Inicio
+                        </a>
+                        <a href="nosotros.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Nosotros
+                        </a>
+                        <a href="servicios.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Servicios
+                        </a>
+                        <a href="productos.html" class="block text-emerald-400 font-semibold border-l-2 border-emerald-500 pl-4">
+                            Productos
+                        </a>
+                        <a href="contacto.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Contacto
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact info -->
+                <div class="col-span-1">
+                    <h3 class="text-lg font-bold mb-6">Contacto</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 bg-emerald-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">+52 (844) 144-7725</p>
+                                <p class="text-gray-400 text-sm">Lun - Vie 8AM - 5PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 bg-emerald-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">info@alraplastic.com</p>
+                                <p class="text-gray-400 text-sm">Respuesta en 24hrs</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 bg-emerald-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">Ramos Arizpe, Coahuila</p>
+                                <p class="text-gray-400 text-sm">Paseo de los Encinos #305, Fracc. Torremolinos, C.P 25903</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom footer -->
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 ALRA PLASTIC. Todos los derechos reservados.
+                    </p>
+                    <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                        <span class="text-gray-400 text-sm">Orgullosamente mexicana</span>
+                        <div class="w-6 h-4 bg-gradient-to-r from-green-500 via-white to-red-500 rounded-sm"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menu-button');
+        const closeButton = document.getElementById('close-button');
+        const mobileNav = document.getElementById('mobile-nav-links');
+
+        menuButton.addEventListener('click', () => {
+            mobileNav.classList.remove('hidden');
+            menuButton.classList.add('hidden');
+            closeButton.classList.remove('hidden');
+        });
+
+        closeButton.addEventListener('click', () => {
+            mobileNav.classList.add('hidden');
+            menuButton.classList.remove('hidden');
+            closeButton.classList.add('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
   </body>
 </html>

@@ -5,148 +5,690 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTACTO - ALRA PLASTIC</title>
     <link rel="stylesheet" href="output.css">
-    <link rel="icon" href="/drive/logo.png">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/drive/logo.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <section>
-        <nav class="bg-white flex w-full py-5 px-10">
-            <div class="md:w-2/12 w-6/12">
-                <a href="index.html"><img src="/drive/logo.png" alt="logo" class="w-20" /></a>
-            </div>
-            <div class="md:hidden w-6/12 flex justify-end items-center">
-                <button id="menu-button" class="text-2xl">&#9776;</button>
-                <button id="close-button" class="text-2xl hidden">&times;</button>
-            </div>
-            <div class="hidden md:block md:w-6/12 my-auto text-right">
-                <div class="py-2">
-                    <a href="index.html" class="px-5 hover:underline hover:underline-offset-1">Inicio</a>
-                    <a href="productos.html" class="px-5 hover:underline hover:underline-offset-1">Productos de Plastico</a>
-                    <a href="servicios.html" class="px-5 hover:underline hover:underline-offset-1">Servicios</a>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="/drive/logo.png" alt="ALRA PLASTIC" class="h-16 w-auto">
                 </div>
-                <div class="py-2">
-                    <a href="nosotros.html" class="px-5 hover:underline hover:underline-offset-1">Acerca de</a>
-                    <a href="contacto.html" class="px-5 hover:underline hover:underline-offset-1 text-orange-600 ">Contacto</a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-8">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-emerald-600 font-medium px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Inicio</a>
+                    <a href="productos.html"
+                        class="text-gray-700 hover:text-emerald-600 font-medium px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Productos</a>
+                    <a href="servicios.html"
+                        class="text-gray-700 font-semibold px-3 py-2 rounded-lg">Servicios</a>
+                    <a href="nosotros.html"
+                        class="text-gray-700 hover:text-emerald-600 font-medium px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Acerca
+                        de</a>
+                    <a href="contacto.html"
+                        class="text-emerald-600 hover:text-emerald-600 font-medium bg-emerald-50 px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Contacto</a>
                 </div>
-            </div>
-            <div class="hidden w-full flex flex-col my-auto md:hidden text-left" id="mobile-nav-links">
-                <a href="index.html" class="px-5">Inicio</a>
-                <a href="productos.html" class="px-5">Productos de Plastico</a>
-                <a href="servicios.html" class="px-5">Servicios</a>
-                <a href="nosotros.html" class="px-5">Acerca de</a>
-                <a href="contacto.html" class="px-5 text-orange-600 ">Contacto</a>
-            </div>
-            <div class="hidden md:block w-2/12 my-auto text-center">
-                <h1 class="text-xs font-bold">LUN - VIE 8AM - 5PM</h1>
-                <h3 class="text-xs font-light">+52 (844) 227 4808</h3>
-                <h3 class="text-xs font-light">+52 (844) 144 7725</h3>
-                <h3 class="text-xs font-light">+52 (844) 344 5808</h3>
-            </div>
-            <div class="hidden md:block w-2/12 my-auto text-right">
-                <a href="contacto.html" class="bg-green-400 hover:bg-green-600 py-2 px-3 rounded text-white text-sm font-bold">CONTACTANOS</a>
-            </div>
-        </nav>
-    </section>
 
-    <section>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599.560954190927!2d-100.94033432686409!3d25.55299766745546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86881461f5c46bd7%3A0x3411fc523527ff79!2sALRA%20PLASTIC!5e0!3m2!1ses-419!2smx!4v1717623025190!5m2!1ses-419!2smx" class="w-full" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-
-    <section class="w-full md:flex bg-gray-100 px-10 md:px-20 py-10">
-        <div class="md:w-1/2 text-center pb-10 md:pb-0">
-            <h1 class="font-extrabold text-blue-900 text-3xl pb-5">NUESTRAS REDES</h1>
-            <div class="flex justify-center">
-                <a href="https://m.facebook.com/profile.php?id=61560482583195&mibextid=LQQJ4d" target="_blank"><img src="/assets/facebook.png" alt="facebook"></a>
-                <a href="https://api.whatsapp.com/send/?phone=528441447725" target="_blank"><img src="/assets/whatsapp.png" alt="whatsapp"></a>
-            </div>
-        </div>
-        <div class="md:w-1/2">
-            <h1 class="font-extrabold text-blue-900 text-3xl pb-5">INFORMACION DE CONTACTO</h1>
-            <div class="flex items-center py-1">
-                <img src="/assets/llenado_green.png" alt="imagen" class="w-6 h-6 mx-3">
-                <h1>Paseo de los Encinos #305, Fracc. Torremolinos, C.P 25903, Ramos Arizpe, Coah.</h1>
-            </div>
-            <div class="flex items-center py-1">
-                <img src="/assets/send_green.png" alt="imagen" class="w-6 h-6 mx-3">
-                <h1>info@alraplastic.com</h1>
-            </div>
-            <div class="flex items-center py-1">
-                <img src="/assets/whatsapp.png" alt="imagen" class="w-6 h-6 mx-3">
-                <h1>+52 (844) 844 344 5808</h1>
-            </div>
-            <div class="flex items-center py-1">
-                <img src="/assets/icons8-teléfono-30.png" alt="imagen" class="w-6 h-6 mx-3">
-                <h1>+52 (844) 144 7725</h1>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-gray-100 px-5 md:px-20 py-10 w-full md:flex">
-        <div class="md:w-1/2 px-10">
-            <h1 class="font-extrabold text-blue-900 text-3xl mt-10">CONTACTANOS</h1>
-            <p class="font-semibold text-base py-7">¿Tienes preguntas sobre nuestros productos o servicios? Estamos a un clic de distancia.</p>
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="ecccaf80-8b73-41cd-9e61-896b00edf7aa">
-                <div class="w-full flex py-4">
-                    <div class="w-1/2 pr-2">
-                        <input class="w-full border-b-2 border-black px-3 py-2" name="name" type="text" placeholder="Nombre">
+                <!-- Contact Info -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <div class="text-right">
+                        <p class="text-xs font-semibold text-gray-800">LUN - VIE 8AM - 5PM</p>
+                        <p class="text-xs text-gray-600">+52 (844) 227 4808</p>
                     </div>
-                    <div class="w-1/2 pl-2">
-                        <input class="w-full border-b-2 border-black px-3 py-2" name="subject" type="text" placeholder="Asunto">
-                    </div>
+                    <a href="contacto.html"
+                        class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-full font-semibold hover:from-emerald-600 hover:to-emerald-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                        Contáctanos
+                    </a>
                 </div>
-                <input type="email" name="email" class="w-full mb-4 border-b-2 border-black px-3 py-2" placeholder="Email">
-                <input type="text" class="w-full mb-5 border-b-2 border-black px-3 pt-2 pb-10" name="message" placeholder="¿Como podemos ayudarte?">
-                <p class="font-light text-xs">Al hacer clic, acepta nuestras condiciones de términos y privacidad.</p>
-                <button type="submit" class="bg-green-500 text-white font-bold text-sm rounded px-4 py-2 mt-3 hover:bg-green-700">ENVIAR MENSAJE</button>
-            </form>
-        </div>
-        <div class="md:w-1/2">
-            <div class="w-full md:flex">
-                <div class="hidden md:block md:w-1/3">
-                    <img src="/assets/plastico-azul-home-1.jpg" alt="plastico_azul_imagen" class="w-36 h-36 rounded">
-                </div>
-                <div class="md:w-2/3 my-auto mt-10 md:mt-0">
-                    <h1 class="font-extrabold text-blue-900 text-xl">VISITANOS</h1>
-                    <p class="font-light text-sm">Visita nuestras instalaciones y mira la calidad de nuestros productos.</p>
+
+                <!-- Mobile menu buttons -->
+                <div class="lg:hidden">
+                    <!-- Menu button (hamburger) -->
+                    <button id="menu-button" class="p-2 rounded-lg text-gray-700 hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    
+                    <!-- Close button (X) -->
+                    <button id="close-button" class="hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-            <h1 class="font-extrabold text-blue-900 text-2xl py-5">HORARIO DE ATENCION</h1>
-            <p class="pb-5">L-V: 9:00 a 17:00 hrs.</p>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-nav-links" class="hidden lg:hidden bg-white shadow-xl border-t">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html"
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Inicio</a>
+                <a href="productos.html"
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Productos</a>
+                <a href="servicios.html"
+                    class="block text-emerald-600 font-semibold py-3 px-4 rounded-lg bg-emerald-50">Servicios</a>
+                <a href="nosotros.html" 
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Acerca de</a>
+                <a href="contacto.html"
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Contacto</a>
+                
+                <!-- Contact info in mobile -->
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <div class="text-center mb-4">
+                        <p class="text-sm font-semibold text-gray-800">LUN - VIE 8AM - 5PM</p>
+                        <p class="text-sm text-gray-600">+52 (844) 227 4808</p>
+                    </div>
+                    <a href="contacto.html"
+                        class="block w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-full font-semibold text-center hover:from-emerald-600 hover:to-emerald-700 transition-all">
+                        Contáctanos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Map -->
+    <section class="relative pt-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-blue-50"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center px-4 py-2 bg-emerald-100 rounded-full text-emerald-700 text-sm font-medium mb-6">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                    </svg>
+                    Visítanos en Ramos Arizpe
+                </div>
+                <h1 class="text-5xl md:text-6xl font-black text-gray-900 mb-6">
+                    <span class="text-emerald-600">Contacta</span> con nosotros
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Únete a la revolución del reciclaje. Estamos aquí para ayudarte a encontrar las mejores soluciones para tus necesidades de plásticos reciclados.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Interactive Map -->
+        <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599.560954190927!2d-100.94033432686409!3d25.55299766745546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86881461f5c46bd7%3A0x3411fc523527ff79!2sALRA%20PLASTIC!5e0!3m2!1ses-419!2smx!4v1717623025190!5m2!1ses-419!2smx" 
+                class="w-full h-96 md:h-[500px] object-cover" 
+                style="border:0; filter: grayscale(0.3);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="absolute bottom-6 left-6 z-20 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
+                <div class="flex items-center space-x-3">
+                    <div class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+                    <span class="text-sm font-semibold text-gray-900">ALRA PLASTIC - Abierto ahora</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="w-full md:flex px-10 md:px-20 pb-10 md:items-center md:pt-10">
-        <div class="md:w-1/3 flex justify-center">
-            <img src="/drive/logo.png" alt="logo" class="w-28 md:w-36">
-        </div>
-        <div class="md:w-1/3 my-6 md:pl-10">
-            <h1 class="font-extrabold">MENU</h1>
-            <div class="flex flex-col">
-                <a href="index.html" class="font-light text-sm border-l-[1px] border-black mr-2">HOME</a>
-                <a href="nosotros.html" class="font-light text-sm border-l-[1px] border-black mr-2">NOSOTROS</a>
-                <a href="servicios.html" class="font-light text-sm border-l-[1px] border-black mr-2">SERVICIOS</a>
-                <a href="contacto.html" class="font-light text-sm border-l-[1px] border-black mr-2">CONTACTO</a>
+    <!-- Contact Information & Social Media -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Social Media & Networks -->
+                <div class="order-2 lg:order-1">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-emerald-100 to-transparent rounded-full transform translate-x-8 -translate-y-8"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M18 9.5a1.5 1.5 0 11-3 0v-6a1.5 1.5 0 11-3 0v6a1.5 1.5 0 11-3 0v-6a1.5 1.5 0 11-3 0v6a1.5 1.5 0 11-3 0"></path>
+                                        <path d="M9 12l2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <h2 class="text-3xl font-bold text-gray-900">Síguenos</h2>
+                            </div>
+                            
+                            <p class="text-gray-600 mb-8 text-lg">
+                                Mantente actualizado con nuestras últimas iniciativas de reciclaje y productos innovadores.
+                            </p>
+                            
+                            <div class="space-y-4">
+                                <a href="https://m.facebook.com/profile.php?id=61560482583195&mibextid=LQQJ4d" 
+                                   target="_blank"
+                                   class="flex items-center p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl hover:from-blue-100 hover:to-blue-200 transition-all duration-300 group">
+                                    <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-gray-900">Facebook</h3>
+                                        <p class="text-sm text-gray-600">Síguenos para más contenido</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://api.whatsapp.com/send/?phone=528441447725" 
+                                   target="_blank"
+                                   class="flex items-center p-4 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl hover:from-green-100 hover:to-green-200 transition-all duration-300 group">
+                                    <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-gray-900">WhatsApp</h3>
+                                        <p class="text-sm text-gray-600">Mensaje directo y rápido</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="order-1 lg:order-2">
+                    <div class="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full transform translate-x-16 -translate-y-16"></div>
+                        <div class="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full transform -translate-x-8 translate-y-8"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="flex items-center mb-8">
+                                <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                    </svg>
+                                </div>
+                                <h2 class="text-3xl font-bold">Información de Contacto</h2>
+                            </div>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center mt-1 flex-shrink-0">
+                                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1">Ubicación</h3>
+                                        <p class="text-emerald-100">Paseo de los Encinos #305, Fracc. Torremolinos, C.P 25903, Ramos Arizpe, Coah.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center mt-1 flex-shrink-0">
+                                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1">Email</h3>
+                                        <p class="text-emerald-100">info@alraplastic.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center mt-1 flex-shrink-0">
+                                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1">WhatsApp</h3>
+                                        <p class="text-emerald-100">+52 (844) 844 344 5808</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center mt-1 flex-shrink-0">
+                                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1">Teléfono</h3>
+                                        <p class="text-emerald-100">+52 (844) 144 7725</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 pt-6 border-t border-white/20">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold">Horario de Atención</p>
+                                        <p class="text-emerald-100 text-sm">Lunes - Viernes: 9:00 - 17:00 hrs</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="md:w-1/3">
-            <div class="flex py-1">
-                <img src="/assets/mas.png" alt="mas_imagen" class="w-6">
-                <h3>+52 (844) 144-7725</h3>
+    </section>
+
+    <!-- Contact Form & Visit Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                
+                <!-- Contact Form -->
+                <div class="order-2 lg:order-1">
+                    <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-xl border border-gray-100">
+                        <div class="mb-8">
+                            <div class="inline-flex items-center px-4 py-2 bg-emerald-100 rounded-full text-emerald-700 text-sm font-medium mb-4">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                                Envíanos un mensaje
+                            </div>
+                            <h2 class="text-4xl font-bold text-gray-900 mb-4">¿Cómo podemos ayudarte?</h2>
+                            <p class="text-lg text-gray-600">
+                                ¿Tienes preguntas sobre nuestros productos de plástico reciclado? Estamos aquí para ayudarte a encontrar las mejores soluciones sostenibles.
+                            </p>
+                        </div>
+                        
+                        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                            <input type="hidden" name="access_key" value="ecccaf80-8b73-41cd-9e61-896b00edf7aa">
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="group">
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Nombre completo</label>
+                                    <input 
+                                        type="text" 
+                                        name="name" 
+                                        required
+                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/20 transition-all duration-200 bg-white/50 group-hover:border-gray-300" 
+                                        placeholder="Tu nombre completo">
+                                </div>
+                                <div class="group">
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Asunto</label>
+                                    <input 
+                                        type="text" 
+                                        name="subject" 
+                                        required
+                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/20 transition-all duration-200 bg-white/50 group-hover:border-gray-300" 
+                                        placeholder="Motivo de contacto">
+                                </div>
+                            </div>
+                            
+                            <div class="group">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+                                <input 
+                                    type="email" 
+                                    name="email" 
+                                    required
+                                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/20 transition-all duration-200 bg-white/50 group-hover:border-gray-300" 
+                                    placeholder="tu@email.com">
+                            </div>
+                            
+                            <div class="group">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Mensaje</label>
+                                <textarea 
+                                    name="message" 
+                                    rows="5" 
+                                    required
+                                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/20 transition-all duration-200 bg-white/50 group-hover:border-gray-300 resize-none" 
+                                    placeholder="Describe tu consulta sobre nuestros productos reciclados o servicios..."></textarea>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <input 
+                                    type="checkbox" 
+                                    id="terms" 
+                                    required
+                                    class="mt-1 w-5 h-5 text-emerald-600 border-2 border-gray-300 rounded focus:ring-emerald-500">
+                                <label for="terms" class="text-sm text-gray-600 leading-relaxed">
+                                    Acepto los términos y condiciones de privacidad. Mis datos serán utilizados únicamente para responder a esta consulta.
+                                </label>
+                            </div>
+                            
+                            <button 
+                                type="submit" 
+                                class="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-emerald-700 hover:to-emerald-800 transform hover:scale-[1.02] transition-all duration-200 shadow-lg hover:shadow-xl">
+                                <span class="flex items-center justify-center space-x-2">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
+                                    </svg>
+                                    <span>Enviar Mensaje</span>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Visit Us Section -->
+                <div class="order-1 lg:order-2">
+                    <div class="space-y-8">
+                        <!-- Visit our facilities -->
+                        <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full transform translate-x-8 -translate-y-8"></div>
+                            
+                            <div class="relative z-10">
+                                <div class="flex items-center mb-6">
+                                    <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mr-4">
+                                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold">Visita Nuestras Instalaciones</h3>
+                                        <p class="text-blue-100">Conoce nuestro proceso de reciclaje</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="space-y-4 mb-6">
+                                    <p class="text-blue-100 leading-relaxed">
+                                        Te invitamos a conocer de primera mano cómo transformamos los residuos plásticos en productos de alta calidad. Descubre nuestro compromiso con el medio ambiente.
+                                    </p>
+                                    
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <span class="text-blue-100">Productos de alta calidad</span>
+                                    </div>
+                                    
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <span class="text-blue-100">Compromiso ambiental real</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white/10 rounded-2xl p-4 backdrop-blur-sm">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <p class="font-bold text-lg">Horario de Visitas</p>
+                                            <p class="text-blue-100">Lunes - Viernes</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <p class="font-bold text-lg">9:00 - 17:00</p>
+                                            <p class="text-blue-100 text-sm">Cita previa recomendada</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Recycling Impact Stats -->
+                        <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+                            <div class="text-center mb-8">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Nuestro Impacto Ambiental</h3>
+                                <p class="text-gray-600">10 años transformando residuos en oportunidades</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="text-center p-4 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl">
+                                    <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="text-2xl font-bold text-emerald-600">500+</p>
+                                    <p class="text-sm text-gray-600">Toneladas recicladas</p>
+                                </div>
+                                
+                                <div class="text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl">
+                                    <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="text-2xl font-bold text-blue-600">100+</p>
+                                    <p class="text-sm text-gray-600">Clientes satisfechos</p>
+                                </div>
+                                
+                                <div class="text-center p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl">
+                                    <div class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="text-2xl font-bold text-purple-600">10</p>
+                                    <p class="text-sm text-gray-600">Años de experiencia</p>
+                                </div>
+                                
+                                <div class="text-center p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl">
+                                    <div class="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="text-2xl font-bold text-orange-600">100%</p>
+                                    <p class="text-sm text-gray-600">Calidad garantizada</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="flex py-1">
-                <img src="/assets/mas.png" alt="mas_imagen" class="w-6">
-                <h3>info@alraplastic.com</h3>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-20 bg-gradient-to-br from-emerald-600 via-emerald-700 to-blue-700 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full transform -translate-x-48 -translate-y-48"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-white/5 rounded-full transform translate-x-40 translate-y-40"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-8">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                </svg>
+                Únete al cambio sostenible
             </div>
-            <div class="flex py-1">
-                <img src="/assets/mas.png" alt="mas_imagen" class="w-6 my-auto h-6" />
-                <div>
-                    <h3>Paseo de los Encinos #305, Fracc. Torremolinos, C.P 25903, Ramos Arizpe, Coah.</h3>
+            
+            <h2 class="text-5xl md:text-6xl font-black text-white mb-6 leading-tight">
+                ¿Listo para hacer la <span class="text-emerald-300">diferencia</span>?
+            </h2>
+            
+            <p class="text-xl text-emerald-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Contáctanos hoy y descubre cómo nuestros productos de plástico reciclado pueden ayudarte a construir un futuro más sostenible para tu empresa y el planeta.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="https://api.whatsapp.com/send/?phone=528441447725" 
+                   target="_blank"
+                   class="inline-flex items-center px-8 py-4 bg-white text-emerald-700 rounded-2xl font-bold text-lg hover:bg-emerald-50 transform hover:scale-105 transition-all duration-200 shadow-xl hover:shadow-2xl group">
+                    <svg class="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                    </svg>
+                    <span>WhatsApp Directo</span>
+                </a>
+                
+                <a href="tel:+528441447725" 
+                   class="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-2xl font-bold text-lg hover:bg-white hover:text-emerald-700 transform hover:scale-105 transition-all duration-200 group">
+                    <svg class="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                    </svg>
+                    <span>Llamar Ahora</span>
+                </a>
+            </div>
+            
+            <div class="mt-12 flex justify-center items-center space-x-8 text-emerald-200">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-sm">Respuesta rápida</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-sm">Cotización gratuita</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-sm">Asesoría especializada</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Logo and description -->
+                <div class="col-span-1">
+                    <img src="/drive/logo.png" alt="ALRA PLASTIC" class="h-12 mb-6">
+                    <p class="text-gray-400 mb-6">
+                        Empresa orgullosamente mexicana especializada en la recolección, reciclaje y venta de productos plásticos.
+                    </p>
+                    <div class="flex space-x-4">
+                        <div class="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold">♻️</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">10 años</p>
+                            <p class="text-gray-400 text-sm">Reciclando</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu links -->
+                <div class="col-span-1">
+                    <h3 class="text-lg font-bold mb-6">Menú</h3>
+                    <div class="space-y-4">
+                        <a href="index.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Inicio
+                        </a>
+                        <a href="nosotros.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Nosotros
+                        </a>
+                        <a href="servicios.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Servicios
+                        </a>
+                        <a href="productos.html" class="block text-emerald-400 font-semibold border-l-2 border-emerald-500 pl-4">
+                            Productos
+                        </a>
+                        <a href="contacto.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Contacto
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact info -->
+                <div class="col-span-1">
+                    <h3 class="text-lg font-bold mb-6">Contacto</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 bg-emerald-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">+52 (844) 144-7725</p>
+                                <p class="text-gray-400 text-sm">Lun - Vie 8AM - 5PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 bg-emerald-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">info@alraplastic.com</p>
+                                <p class="text-gray-400 text-sm">Respuesta en 24hrs</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 bg-emerald-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">Ramos Arizpe, Coahuila</p>
+                                <p class="text-gray-400 text-sm">Paseo de los Encinos #305, Fracc. Torremolinos, C.P 25903</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom footer -->
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 ALRA PLASTIC. Todos los derechos reservados.
+                    </p>
+                    <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                        <span class="text-gray-400 text-sm">Orgullosamente mexicana</span>
+                        <div class="w-6 h-4 bg-gradient-to-r from-green-500 via-white to-red-500 rounded-sm"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="menu.js"></script>
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menu-button');
+        const closeButton = document.getElementById('close-button');
+        const mobileNav = document.getElementById('mobile-nav-links');
+
+        menuButton.addEventListener('click', () => {
+            mobileNav.classList.remove('hidden');
+            menuButton.classList.add('hidden');
+            closeButton.classList.remove('hidden');
+        });
+
+        closeButton.addEventListener('click', () => {
+            mobileNav.classList.add('hidden');
+            menuButton.classList.remove('hidden');
+            closeButton.classList.add('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

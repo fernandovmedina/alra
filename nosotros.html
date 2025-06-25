@@ -4,120 +4,594 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOSOTROS - ALRA PLASTIC</title>
     <link rel="stylesheet" href="output.css">
-    <link rel="icon" href="/drive/logo.png">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/drive/logo.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
   </head>
   <body>
-    <section>
-      <nav class="bg-white flex w-full py-5 px-10">
-          <div class="md:w-2/12 w-6/12">
-              <a href="index.html"><img src="/drive/logo.png" alt="logo" class="w-20" /></a>
-          </div>
-          <div class="md:hidden w-6/12 flex justify-end items-center">
-              <button id="menu-button" class="text-2xl">&#9776;</button>
-              <button id="close-button" class="text-2xl hidden">&times;</button>
-          </div>
-          <div class="hidden md:block md:w-6/12 my-auto text-right">
-              <div class="py-2">
-                  <a href="index.html" class="px-5 hover:underline hover:underline-offset-1">Inicio</a>
-                  <a href="productos.html" class="px-5 hover:underline hover:underline-offset-1">Productos de Plastico</a>
-                  <a href="servicios.html" class="px-5 hover:underline hover:underline-offset-1">Servicios</a>
-              </div>
-              <div class="py-2">
-                  <a href="nosotros.html" class="px-5 text-orange-600 hover:underline hover:underline-offset-1">Acerca de</a>
-                  <a href="contacto.html" class="px-5 hover:underline hover:underline-offset-1">Contacto</a>
-              </div>
-          </div>
-          <div class="hidden w-full flex flex-col my-auto md:hidden text-left" id="mobile-nav-links">
-              <a href="index.html" class="px-5">Inicio</a>
-              <a href="productos.html" class="px-5">Productos de Plastico</a>
-              <a href="servicios.html" class="px-5">Servicios</a>
-              <a href="nosotros.html" class="px-5 text-orange-600">Acerca de</a>
-              <a href="contacto.html" class="px-5">Contacto</a>
-          </div>
-          <div class="hidden md:block w-2/12 my-auto text-center">
-              <h1 class="text-xs font-bold">LUN - VIE 8AM - 5PM</h1>
-              <h3 class="text-xs font-light">+52 (844) 227 4808</h3>
-              <h3 class="text-xs font-light">+52 (844) 144 7725</h3>
-              <h3 class="text-xs font-light">+52 (844) 344 5808</h3>
-          </div>
-          <div class="hidden md:block w-2/12 my-auto text-right">
-              <a href="contacto.html" class="bg-green-400 hover:bg-green-600 py-2 px-3 rounded text-white text-sm font-bold">CONTACTANOS</a>
-          </div>
-      </nav>
-  </section>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="/drive/logo.png" alt="ALRA PLASTIC" class="h-16 w-auto">
+                </div>
 
-    <section class="w-full bg-gray-600 py-36 bg-cover">
-        <div class="md:w-1/2 px-5">
-          <h1
-            class="text-white font-extrabold text-4xl border-b-2 border-green-500"
-          >
-            Nosotros
-          </h1>
-          <p class="text-white pt-6 text-base">
-            ALRA PLASTIC es una empresa orgullosamente mexicana especializada en la recoleccion, reciclaje y venta de productos plasticos en diferentes tipos de variantes
-          </p>
-        </div>
-        <div class="md:w-1/2"></div>
-      </section>
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-8">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-emerald-600 font-medium px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Inicio</a>
+                    <a href="productos.html"
+                        class="text-gray-700 hover:text-emerald-600 font-medium px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Productos</a>
+                    <a href="servicios.html"
+                        class="text-gray-700 font-semibold px-3 py-2 rounded-lg">Servicios</a>
+                    <a href="nosotros.html"
+                        class="text-emerald-600 hover:text-emerald-600 bg-emerald-50 font-medium px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Acerca
+                        de</a>
+                    <a href="contacto.html"
+                        class="text-gray-700 hover:text-emerald-600 font-medium px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Contacto</a>
+                </div>
 
-    <section class="w-full md:flex px-20 py-24 bg-gray-200">
-        <div class="md:w-1/2">
-            <h1 class="font-extrabold text-blue-800 text-3xl">Lideres en productos plasticos</h1>
-            <p class="font-light pt-7">En ALRA PLASTIC estamos comprometidos con la conservacion del medio ambiente por lo cual trabajamos dia con dia promoviendo la reutilizacion de plastico por medio del reciclaje</p>
-            <h3 class="text-green-700 font-bold pt-10 md:pb-0 pb-10">- Equipo ALRA PLASTIC</h3>
+                <!-- Contact Info -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <div class="text-right">
+                        <p class="text-xs font-semibold text-gray-800">LUN - VIE 8AM - 5PM</p>
+                        <p class="text-xs text-gray-600">+52 (844) 227 4808</p>
+                    </div>
+                    <a href="contacto.html"
+                        class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-full font-semibold hover:from-emerald-600 hover:to-emerald-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                        Contáctanos
+                    </a>
+                </div>
+
+                <!-- Mobile menu buttons -->
+                <div class="lg:hidden">
+                    <!-- Menu button (hamburger) -->
+                    <button id="menu-button" class="p-2 rounded-lg text-gray-700 hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    
+                    <!-- Close button (X) -->
+                    <button id="close-button" class="hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="md:w-1/2">
-            <div class="w-full flex">
-                <img src="/images/plastico1.png" alt="imagen" class="w-1/2 px-2">
-                <img src="/images/plastico2.png" alt="imagen" class="w-1/2 px-2">
+
+        <!-- Mobile Menu -->
+        <div id="mobile-nav-links" class="hidden lg:hidden bg-white shadow-xl border-t">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html"
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Inicio</a>
+                <a href="productos.html"
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Productos</a>
+                <a href="servicios.html"
+                    class="block text-emerald-600 font-semibold py-3 px-4 rounded-lg bg-emerald-50">Servicios</a>
+                <a href="nosotros.html" 
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Acerca de</a>
+                <a href="contacto.html"
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Contacto</a>
+                
+                <!-- Contact info in mobile -->
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <div class="text-center mb-4">
+                        <p class="text-sm font-semibold text-gray-800">LUN - VIE 8AM - 5PM</p>
+                        <p class="text-sm text-gray-600">+52 (844) 227 4808</p>
+                    </div>
+                    <a href="contacto.html"
+                        class="block w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-full font-semibold text-center hover:from-emerald-600 hover:to-emerald-700 transition-all">
+                        Contáctanos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative w-full min-h-screen bg-gradient-to-br from-emerald-900 via-emerald-800 to-green-900 flex items-center overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-32 h-32 bg-white rounded-full animate-pulse"></div>
+            <div class="absolute top-40 right-20 w-24 h-24 bg-emerald-300 rounded-full animate-bounce"></div>
+            <div class="absolute bottom-20 left-1/4 w-16 h-16 bg-green-400 rounded-full animate-ping"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 lg:px-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h1 class="text-5xl lg:text-7xl font-black text-white leading-tight">
+                            Transformando
+                            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-green-400">
+                                el Futuro
+                            </span>
+                        </h1>
+                        <div class="w-24 h-2 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full"></div>
+                    </div>
+                    
+                    <p class="text-xl text-emerald-100 leading-relaxed max-w-lg">
+                        Somos pioneros en el reciclaje de plásticos en México, comprometidos con crear un mundo más sostenible para las futuras generaciones.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-emerald-600/20 backdrop-blur-sm border border-emerald-400/30 rounded-2xl px-6 py-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                                <span class="text-emerald-300 font-semibold">15+ Años de Experiencia</span>
+                            </div>
+                        </div>
+                        <div class="bg-emerald-600/20 backdrop-blur-sm border border-emerald-400/30 rounded-2xl px-6 py-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                                <span class="text-emerald-300 font-semibold">500+ Toneladas Recicladas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="relative z-10 bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
+                        <div class="aspect-square bg-gradient-to-br from-emerald-400 to-green-600 rounded-2xl flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-6xl mb-4">♻️</div>
+                                <h3 class="text-2xl font-bold mb-2">Reciclaje Inteligente</h3>
+                                <p class="text-emerald-100">Tecnología avanzada para un futuro limpio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating elements -->
+                    <div class="absolute -top-6 -left-6 w-20 h-20 bg-emerald-400/30 rounded-full animate-bounce"></div>
+                    <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-green-400/40 rounded-full animate-pulse"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="w-full md:flex py-16 md:px-28 px-5">
-        <div class="md:w-1/2 bg-green-500 rounded px-8 py-4 text-white">
-            <h1 class="font-extrabold text-2xl">NUESTRO COMPROMISO</h1>
-            <p class="font-bold text-sm pt-4 pb-20">Contamos con todos los permisos ambientales para asegurar el buen manejo de los materiales, logrando asi la conservacion del medio ambiente, evitando el incremento de la contaminacion.</p>
-        </div>
-        <div class="md:w-1/2 px-8 py-4">
-            <h1 class="font-extrabold text-blue-800 text-2xl">Nos dedicamos a la recolección de residuos plásticos</h1>
-            <p class="text-base text-gray-700 py-6">Nuestro compromiso es el reciclaje de materiales plásticos para asegurar un ecosistema sustentable para nuestra sociedad mientras mantenemos una oferta de productos de calidad superior para la producción de las empresas.</p>
-            <a href="" class="text-white bg-green-500 hover:bg-green-700 rounded px-5 py-3 font-bold text-sm">VER PRODUCTOS</a>
+    <!-- Mission & Vision Section -->
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Nuestra <span class="text-emerald-600">Misión</span>
+                </h2>
+                <div class="w-24 h-1 bg-emerald-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">🌱</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Nuestra Misión</h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Liderar la transformación hacia una economía circular mediante el reciclaje innovador de materiales plásticos, contribuyendo activamente a la preservación del medio ambiente y generando valor económico sostenible.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">🔮</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Nuestra Visión</h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Ser la empresa líder en reciclaje de plásticos en México, reconocida por nuestra innovación tecnológica, compromiso ambiental y excelencia operativa, expandiendo nuestro impacto positivo a nivel nacional.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-6">
+                            <div class="bg-emerald-500 rounded-2xl p-6 text-white text-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                                <div class="text-3xl font-bold mb-2">500+</div>
+                                <div class="text-emerald-100">Toneladas Recicladas</div>
+                            </div>
+                            <div class="bg-blue-500 rounded-2xl p-6 text-white text-center transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+                                <div class="text-3xl font-bold mb-2">15+</div>
+                                <div class="text-blue-100">Años de Experiencia</div>
+                            </div>
+                        </div>
+                        <div class="space-y-6 mt-8">
+                            <div class="bg-green-500 rounded-2xl p-6 text-white text-center transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+                                <div class="text-3xl font-bold mb-2">100+</div>
+                                <div class="text-green-100">Clientes Satisfechos</div>
+                            </div>
+                            <div class="bg-teal-500 rounded-2xl p-6 text-white text-center transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                                <div class="text-3xl font-bold mb-2">24/7</div>
+                                <div class="text-teal-100">Operación Continua</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="w-full md:flex px-10 md:px-20 pb-10 md:items-center md:pt-10">
-      <div class="md:w-1/3 flex justify-center">
-          <img src="/drive/logo.png" alt="logo" class="w-28 md:w-36">
-      </div>
-      <div class="md:w-1/3 my-6 md:pl-10">
-          <h1 class="font-extrabold">MENU</h1>
-          <div class="flex flex-col">
-              <a href="index.html" class="font-light text-sm border-l-[1px] border-black mr-2">HOME</a>
-              <a href="nosotros.html" class="font-light text-sm border-l-[1px] border-black mr-2">NOSOTROS</a>
-              <a href="servicios.html" class="font-light text-sm border-l-[1px] border-black mr-2">SERVICIOS</a>
-              <a href="contacto.html" class="font-light text-sm border-l-[1px] border-black mr-2">CONTACTO</a>
-          </div>
-      </div>
-      <div class="md:w-1/3">
-          <div class="flex py-1">
-              <img src="/assets/mas.png" alt="mas_imagen" class="w-6">
-              <h3>+52 (844) 144-7725</h3>
-          </div>
-          <div class="flex py-1">
-              <img src="/assets/mas.png" alt="mas_imagen" class="w-6">
-              <h3>info@alraplastic.com</h3>
-          </div>
-          <div class="flex py-1">
-              <img src="/assets/mas.png" alt="mas_imagen" class="w-6 my-auto h-6" />
-              <div>
-                  <h3>Paseo de los Encinos #305, Fracc. Torremolinos, C.P 25903, Ramos Arizpe, Coah.</h3>
-              </div>
-          </div>
-      </div>
-  </footer>
+    <!-- Values Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Nuestros <span class="text-emerald-600">Valores</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Los principios que guían cada una de nuestras acciones y decisiones en el camino hacia un futuro más sostenible.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Valor 1 -->
+                <div class="group relative bg-gradient-to-br from-emerald-50 to-green-50 rounded-3xl p-8 border border-emerald-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-4">
+                    <div class="absolute top-6 right-6 w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white text-xl opacity-20 group-hover:opacity-100 transition-opacity duration-300">
+                        🌍
+                    </div>
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-emerald-500 rounded-2xl flex items-center justify-center mb-4">
+                            <span class="text-2xl text-white">🌍</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Responsabilidad Ambiental</h3>
+                        <p class="text-gray-700">
+                            Cada acción que realizamos está orientada a minimizar el impacto ambiental y maximizar los beneficios para nuestro planeta.
+                        </p>
+                    </div>
+                </div>
 
-    <script src="menu.js"></script>
+                <!-- Valor 2 -->
+                <div class="group relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 border border-blue-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-4">
+                    <div class="absolute top-6 right-6 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl opacity-20 group-hover:opacity-100 transition-opacity duration-300">
+                        ⚡
+                    </div>
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mb-4">
+                            <span class="text-2xl text-white">⚡</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Innovación Constante</h3>
+                        <p class="text-gray-700">
+                            Implementamos tecnologías de vanguardia para optimizar nuestros procesos de reciclaje y mejorar continuamente.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Valor 3 -->
+                <div class="group relative bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 border border-purple-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-4">
+                    <div class="absolute top-6 right-6 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white text-xl opacity-20 group-hover:opacity-100 transition-opacity duration-300">
+                        🤝
+                    </div>
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-purple-500 rounded-2xl flex items-center justify-center mb-4">
+                            <span class="text-2xl text-white">🤝</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Integridad</h3>
+                        <p class="text-gray-700">
+                            Actuamos con transparencia, honestidad y ética en todas nuestras relaciones comerciales y operaciones.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Valor 4 -->
+                <div class="group relative bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-8 border border-orange-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-4">
+                    <div class="absolute top-6 right-6 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white text-xl opacity-20 group-hover:opacity-100 transition-opacity duration-300">
+                        🎯
+                    </div>
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mb-4">
+                            <span class="text-2xl text-white">🎯</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Excelencia Operativa</h3>
+                        <p class="text-gray-700">
+                            Nos esforzamos por alcanzar los más altos estándares de calidad en todos nuestros productos y servicios.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Valor 5 -->
+                <div class="group relative bg-gradient-to-br from-teal-50 to-cyan-50 rounded-3xl p-8 border border-teal-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-4">
+                    <div class="absolute top-6 right-6 w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center text-white text-xl opacity-20 group-hover:opacity-100 transition-opacity duration-300">
+                        👥
+                    </div>
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-teal-500 rounded-2xl flex items-center justify-center mb-4">
+                            <span class="text-2xl text-white">👥</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Compromiso Social</h3>
+                        <p class="text-gray-700">
+                            Contribuimos activamente al desarrollo de nuestras comunidades y al bienestar de nuestros colaboradores.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Valor 6 -->
+                <div class="group relative bg-gradient-to-br from-yellow-50 to-amber-50 rounded-3xl p-8 border border-yellow-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-4">
+                    <div class="absolute top-6 right-6 w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white text-xl opacity-20 group-hover:opacity-100 transition-opacity duration-300">
+                        🚀
+                    </div>
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-yellow-500 rounded-2xl flex items-center justify-center mb-4">
+                            <span class="text-2xl text-white">🚀</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Visión de Futuro</h3>
+                        <p class="text-gray-700">
+                            Anticipamos las necesidades del mercado y nos adaptamos proactivamente a los cambios del sector.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-24 bg-gradient-to-br from-gray-900 via-emerald-900 to-green-900">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Nuestro <span class="text-emerald-400">Equipo</span>
+                </h2>
+                <p class="text-xl text-emerald-100 max-w-3xl mx-auto">
+                    Profesionales apasionados por crear un impacto positivo en el medio ambiente a través de soluciones innovadoras de reciclaje.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
+                        <h3 class="text-3xl font-bold text-white mb-6">Liderazgo con Propósito</h3>
+                        <p class="text-emerald-100 leading-relaxed mb-6">
+                            Nuestro equipo está conformado por expertos en ingeniería ambiental, gestión de residuos y desarrollo sostenible. Cada miembro aporta una perspectiva única y valiosa para enfrentar los desafíos del reciclaje moderno.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-3 h-3 bg-emerald-400 rounded-full"></div>
+                                <span class="text-white">Ingenieros Especializados en Reciclaje</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                                <span class="text-white">Expertos en Gestión Ambiental</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-3 h-3 bg-blue-400 rounded-full"></div>
+                                <span class="text-white">Especialistas en Calidad y Procesos</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-emerald-500/20 backdrop-blur-sm rounded-2xl p-6 border border-emerald-400/30">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center">
+                                <span class="text-2xl text-white">♻️</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Compromiso Conjunto</h4>
+                                <p class="text-emerald-200">Trabajamos unidos hacia un futuro más sostenible</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-6">
+                            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                                <div class="w-16 h-16 bg-emerald-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                    <span class="text-2xl text-white">👨‍💼</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-2">Dirección</h4>
+                                <p class="text-emerald-200 text-sm">Liderazgo estratégico</p>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                                <div class="w-16 h-16 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                    <span class="text-2xl text-white">👨‍🔬</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-2">Ingeniería</h4>
+                                <p class="text-blue-200 text-sm">Innovación técnica</p>
+                            </div>
+                        </div>
+                        <div class="space-y-6 mt-8">
+                            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+                                <div class="w-16 h-16 bg-green-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                    <span class="text-2xl text-white">👷‍♂️</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-2">Operaciones</h4>
+                                <p class="text-green-200 text-sm">Excelencia diaria</p>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center transform rotate-1 hover:rotate-0 transition-transform duration-300">
+                                <div class="w-16 h-16 bg-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                    <span class="text-2xl text-white">🔬</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-2">Calidad</h4>
+                                <p class="text-purple-200 text-sm">Control riguroso</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-r from-emerald-600 to-green-600">
+        <div class="container mx-auto px-6 lg:px-20 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-8">
+                    ¿Listo para ser parte del cambio?
+                </h2>
+                <p class="text-xl text-emerald-100 mb-12 leading-relaxed">
+                    Únete a nosotros en la misión de crear un futuro más sostenible. Descubre cómo podemos trabajar juntos para transformar residuos en oportunidades.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="contacto.html" class="group bg-white text-emerald-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-50 transform hover:scale-105 transition-all duration-200 shadow-xl flex items-center justify-center space-x-3">
+                        <span>Contáctanos Hoy</span>
+                        <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                    <a href="servicios.html" class="group border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-emerald-600 transform hover:scale-105 transition-all duration-200 flex items-center justify-center space-x-3">
+                        <span>Ver Servicios</span>
+                        <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Logo and description -->
+                <div class="col-span-1">
+                    <img src="/drive/logo.png" alt="ALRA PLASTIC" class="h-12 mb-6">
+                    <p class="text-gray-400 mb-6">
+                        Empresa orgullosamente mexicana especializada en la recolección, reciclaje y venta de productos plásticos.
+                    </p>
+                    <div class="flex space-x-4">
+                        <div class="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold">♻️</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">10 años</p>
+                            <p class="text-gray-400 text-sm">Reciclando</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu links -->
+                <div class="col-span-1">
+                    <h3 class="text-lg font-bold mb-6">Menú</h3>
+                    <div class="space-y-4">
+                        <a href="index.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Inicio
+                        </a>
+                        <a href="nosotros.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Nosotros
+                        </a>
+                        <a href="servicios.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Servicios
+                        </a>
+                        <a href="productos.html" class="block text-emerald-400 font-semibold border-l-2 border-emerald-500 pl-4">
+                            Productos
+                        </a>
+                        <a href="contacto.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Contacto
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact info -->
+                <div class="col-span-1">
+                    <h3 class="text-lg font-bold mb-6">Contacto</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 bg-emerald-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">+52 (844) 144-7725</p>
+                                <p class="text-gray-400 text-sm">Lun - Vie 8AM - 5PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 bg-emerald-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">info@alraplastic.com</p>
+                                <p class="text-gray-400 text-sm">Respuesta en 24hrs</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 bg-emerald-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">Ramos Arizpe, Coahuila</p>
+                                <p class="text-gray-400 text-sm">Paseo de los Encinos #305, Fracc. Torremolinos, C.P 25903</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom footer -->
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 ALRA PLASTIC. Todos los derechos reservados.
+                    </p>
+                    <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                        <span class="text-gray-400 text-sm">Orgullosamente mexicana</span>
+                        <div class="w-6 h-4 bg-gradient-to-r from-green-500 via-white to-red-500 rounded-sm"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menu-button');
+        const closeButton = document.getElementById('close-button');
+        const mobileNav = document.getElementById('mobile-nav-links');
+
+        menuButton.addEventListener('click', () => {
+            mobileNav.classList.remove('hidden');
+            menuButton.classList.add('hidden');
+            closeButton.classList.remove('hidden');
+        });
+
+        closeButton.addEventListener('click', () => {
+            mobileNav.classList.add('hidden');
+            menuButton.classList.remove('hidden');
+            closeButton.classList.add('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
   </body>
 </html>

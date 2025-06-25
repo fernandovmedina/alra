@@ -5,126 +5,511 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SERVICIOS - ALRA PLASTIC</title>
     <link rel="stylesheet" href="output.css">
-    <link rel="icon" href="/drive/logo.png">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/drive/logo.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 1px solid #e0f2fe;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .process-step {
+            position: relative;
+        }
+
+        .process-step::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -2rem;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 15px solid #10b981;
+            transform: translateY(-50%);
+        }
+
+        .process-step:last-child::before {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .process-step::before {
+                display: none;
+            }
+        }
+    </style>
   </head>
   <body>
-    <section>
-      <nav class="bg-white flex w-full py-5 px-10">
-          <div class="md:w-2/12 w-6/12">
-              <a href="index.html"><img src="/drive/logo.png" alt="logo" class="w-20" /></a>
-          </div>
-          <div class="md:hidden w-6/12 flex justify-end items-center">
-              <button id="menu-button" class="text-2xl">&#9776;</button>
-              <button id="close-button" class="text-2xl hidden">&times;</button>
-          </div>
-          <div class="hidden md:block md:w-6/12 my-auto text-right">
-              <div class="py-2">
-                  <a href="index.html" class="px-5 hover:underline hover:underline-offset-1">Inicio</a>
-                  <a href="productos.html" class="px-5 hover:underline hover:underline-offset-1">Productos de Plastico</a>
-                  <a href="servicios.html" class="px-5 hover:underline text-orange-600 hover:underline-offset-1">Servicios</a>
-              </div>
-              <div class="py-2">
-                  <a href="nosotros.html" class="px-5 hover:underline hover:underline-offset-1">Acerca de</a>
-                  <a href="contacto.html" class="px-5 hover:underline hover:underline-offset-1">Contacto</a>
-              </div>
-          </div>
-          <div class="hidden w-full flex flex-col my-auto md:hidden text-left" id="mobile-nav-links">
-              <a href="index.html" class="px-5">Inicio</a>
-              <a href="productos.html" class="px-5">Productos de Plastico</a>
-              <a href="servicios.html" class="px-5 text-orange-600">Servicios</a>
-              <a href="nosotros.html" class="px-5">Acerca de</a>
-              <a href="contacto.html" class="px-5">Contacto</a>
-          </div>
-          <div class="hidden md:block w-2/12 my-auto text-center">
-              <h1 class="text-xs font-bold">LUN - VIE 8AM - 5PM</h1>
-              <h3 class="text-xs font-light">+52 (844) 227 4808</h3>
-              <h3 class="text-xs font-light">+52 (844) 144 7725</h3>
-              <h3 class="text-xs font-light">+52 (844) 344 5808</h3>
-          </div>
-          <div class="hidden md:block w-2/12 my-auto text-right">
-              <a href="contacto.html" class="bg-green-400 hover:bg-green-600 py-2 px-3 rounded text-white text-sm font-bold">CONTACTANOS</a>
-          </div>
-      </nav>
-  </section>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="/drive/logo.png" alt="ALRA PLASTIC" class="h-16 w-auto">
+                </div>
 
-    <section class="w-full bg-gray-600 py-20 px-5 md:px-20">
-      <div class="md:w-1/2 md:px-5">
-        <h1
-          class="text-white font-extrabold text-4xl border-b-2 border-green-500"
-        >
-          NUESTROS SERVICIOS
-        </h1>
-        <p class="text-white pt-6 text-base font-bold">
-          “Especialistas en molienda y pelletizado de plásticos reciclables”
-          Contamos con los permisos medio ambientales para la recolección y
-          transformacionales del SCRAP plástico:
-        </p>
-        <ul class="text-white font-bold">
-          <li>- Sema # SGA724/2019</li>
-          <li>- P. CIVIL SPC/AP/1635/2019</li>
-        </ul>
-      </div>
-      <div class="md:w-1/2"></div>
-    </section>
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-8">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-emerald-600 font-medium px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Inicio</a>
+                    <a href="productos.html"
+                        class="text-gray-700 hover:text-emerald-600 font-medium px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Productos</a>
+                    <a href="servicios.html"
+                        class="text-emerald-600 font-semibold px-3 py-2 rounded-lg bg-emerald-50">Servicios</a>
+                    <a href="nosotros.html"
+                        class="text-gray-700 hover:text-emerald-600 font-medium px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Acerca
+                        de</a>
+                    <a href="contacto.html"
+                        class="text-gray-700 hover:text-emerald-600 font-medium px-3 py-2 rounded-lg hover:bg-emerald-50 transition-all">Contacto</a>
+                </div>
 
-    <section class="w-full md:flex md:px-20 py-16">
-      <div class="md:w-1/3 px-5 flex flex-col">
-        <h1 class="font-extrabold text-blue-900 text-3xl">Acceso Rapido</h1>
-        <a href="productos.html" class="text-green-500 font-bold text-sm py-2 hover:underline hover:underline-offset-1">CATALOGO DE PRODUCTOS</a>
-        <a href="nosotros.html" class="text-blue-900 font-bold text-sm py-2 hover:underline hover:underline-offset-1">NOSOTROS</a>
-        <a href="contacto.html" class="text-blue-900 font-bold text-sm py-2 mb-10 hover:underline hover:underline-offset-1">CONTACTO</a>
-        <div class="bg-blue-900 rounded px-5 pb-10">
-          <h1 class="font-bold text-green-500 text-xl py-2">¿Necesitas cotizar?</h1>
-          <p class="text-white font-bold text-sm mb-10">Nuestro equipo está preparada para apoyar en todas tu necesidades de compra. Envíanos un mensaje o llámanos para recibir la información que necesites.</p>
-          <a href="contacto.html" class="bg-green-500 hover:bg-green-900 text-white font-bold text-sm rounded px-4 py-2">SOLICITAR COTIZACION</a>
+                <!-- Contact Info -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <div class="text-right">
+                        <p class="text-xs font-semibold text-gray-800">LUN - VIE 8AM - 5PM</p>
+                        <p class="text-xs text-gray-600">+52 (844) 227 4808</p>
+                    </div>
+                    <a href="contacto.html"
+                        class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-full font-semibold hover:from-emerald-600 hover:to-emerald-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                        Contáctanos
+                    </a>
+                </div>
+
+                <!-- Mobile menu buttons -->
+                <div class="lg:hidden">
+                    <!-- Menu button (hamburger) -->
+                    <button id="menu-button" class="p-2 rounded-lg text-gray-700 hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    
+                    <!-- Close button (X) -->
+                    <button id="close-button" class="hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="md:w-2/3 mt-8 md:mt-0 px-5">
-        <h1 class="font-extrabold text-blue-900 text-2xl pb-4">¿QUÉ PRODUCTOS COMPRAMOS?</h1>
-        <p class="text-base font-light pb-10">Scrap plástico post-industriales</p>
-        <h1 class="font-extrabold text-blue-900 text-2xl pb-4">RECOLECCION DE SCRAP PLASTICO</h1>
-        <p class="text-base font-light pb-10">Trabaja en colaboración con el cliente desarrollado productos según sus necesidades</p>
-        <h1 class="font-extrabold text-blue-900 text-2xl pb-4">Triturado de material plástico</h1>
-        <p class="text-base font-light pb-10">Se tritura de acuerdo a la clasificación de cada tipo de plastico</p>
-        <h1 class="font-extrabold text-blue-900 text-2xl pb-4">FABRICACION DE PIEZAS</h1>
-        <p class="text-base font-light pb-10">Fabricacion de piezas especiales de grado automotriz</p>
-        <h1 class="font-extrabold text-blue-900 text-2xl pb-4">MAQUILADOS</h1>
-        <p class="text-base font-light">Maquilados de plasticos reciclabes. (Trituracion y molienda)</p>
-      </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-nav-links" class="hidden lg:hidden bg-white shadow-xl border-t">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html"
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Inicio</a>
+                <a href="productos.html"
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Productos</a>
+                <a href="servicios.html"
+                    class="block text-emerald-600 font-semibold py-3 px-4 rounded-lg bg-emerald-50">Servicios</a>
+                <a href="nosotros.html" 
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Acerca de</a>
+                <a href="contacto.html"
+                    class="block text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">Contacto</a>
+                
+                <!-- Contact info in mobile -->
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <div class="text-center mb-4">
+                        <p class="text-sm font-semibold text-gray-800">LUN - VIE 8AM - 5PM</p>
+                        <p class="text-sm text-gray-600">+52 (844) 227 4808</p>
+                    </div>
+                    <a href="contacto.html"
+                        class="block w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-full font-semibold text-center hover:from-emerald-600 hover:to-emerald-700 transition-all">
+                        Contáctanos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-16 bg-gradient-to-br from-emerald-50 via-white to-blue-50 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2310b981" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="inline-flex items-center bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"></path>
+                    </svg>
+                    Comprometidos con el medio ambiente
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                    Nuestros <span class="text-emerald-600">Servicios</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Especialistas en reciclaje de plásticos con más de 10 años de experiencia. 
+                    Transformamos residuos en oportunidades sostenibles.
+                </p>
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 max-w-4xl mx-auto shadow-xl border border-gray-100">
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-3 h-3 bg-emerald-500 rounded-full"></div>
+                            <span class="text-sm font-semibold text-gray-700">Permisos ambientales</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                            <span class="text-sm font-semibold text-gray-700">SEMA # SGA724/2019</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+                            <span class="text-sm font-semibold text-gray-700">P. CIVIL SPC/AP/1635/2019</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer class="w-full md:flex px-10 md:px-20 pb-10 md:items-center md:pt-10">
-      <div class="md:w-1/3 flex justify-center">
-          <img src="/drive/logo.png" alt="logo" class="w-28 md:w-36">
-      </div>
-      <div class="md:w-1/3 my-6 md:pl-10">
-          <h1 class="font-extrabold">MENU</h1>
-          <div class="flex flex-col">
-              <a href="index.html" class="font-light text-sm border-l-[1px] border-black mr-2">HOME</a>
-              <a href="nosotros.html" class="font-light text-sm border-l-[1px] border-black mr-2">NOSOTROS</a>
-              <a href="servicios.html" class="font-light text-sm border-l-[1px] border-black mr-2">SERVICIOS</a>
-              <a href="contacto.html" class="font-light text-sm border-l-[1px] border-black mr-2">CONTACTO</a>
-          </div>
-      </div>
-      <div class="md:w-1/3">
-          <div class="flex py-1">
-              <img src="/assets/mas.png" alt="mas_imagen" class="w-6">
-              <h3>+52 (844) 144-7725</h3>
-          </div>
-          <div class="flex py-1">
-              <img src="/assets/mas.png" alt="mas_imagen" class="w-6">
-              <h3>info@alraplastic.com</h3>
-          </div>
-          <div class="flex py-1">
-              <img src="/assets/mas.png" alt="mas_imagen" class="w-6 my-auto h-6" />
-              <div>
-                  <h3>Paseo de los Encinos #305, Fracc. Torremolinos, C.P 25903, Ramos Arizpe, Coah.</h3>
-              </div>
-          </div>
-      </div>
-  </footer>
+    <!-- Services Grid -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Servicios Especializados
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Ofrecemos soluciones integrales para el manejo y transformación de residuos plásticos
+                </p>
+            </div>
 
-    <script src="menu.js"></script>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 8h6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Recolección de Scrap</h3>
+                    <p class="text-gray-600 mb-6">Recolectamos residuos plásticos post-industriales directamente en su ubicación con nuestro equipo especializado.</p>
+                    <div class="flex items-center justify-center text-emerald-600 font-semibold">
+                        <span>Servicio completo</span>
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Triturado Especializado</h3>
+                    <p class="text-gray-600 mb-6">Procesamos el material plástico con tecnología avanzada, clasificando según el tipo de plástico.</p>
+                    <div class="flex items-center justify-center text-blue-600 font-semibold">
+                        <span>Tecnología avanzada</span>
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Pelletizado</h3>
+                    <p class="text-gray-600 mb-6">Transformamos el material triturado en pellets de alta calidad para su reutilización industrial.</p>
+                    <div class="flex items-center justify-center text-purple-600 font-semibold">
+                        <span>Alta calidad</span>
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Fabricación de Piezas</h3>
+                    <p class="text-gray-600 mb-6">Producimos piezas especiales de grado automotriz usando material reciclado de alta calidad.</p>
+                    <div class="flex items-center justify-center text-orange-600 font-semibold">
+                        <span>Grado automotriz</span>
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Maquilados</h3>
+                    <p class="text-gray-600 mb-6">Servicios de maquila para trituración y molienda de plásticos reciclables según especificaciones.</p>
+                    <div class="flex items-center justify-center text-teal-600 font-semibold">
+                        <span>Personalizado</span>
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Asesoría Técnica</h3>
+                    <p class="text-gray-600 mb-6">Trabajamos en colaboración con nuestros clientes desarrollando productos según sus necesidades específicas.</p>
+                    <div class="flex items-center justify-center text-pink-600 font-semibold">
+                        <span>Colaborativo</span>
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-gradient-to-r from-gray-50 to-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Nuestro Proceso
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Un proceso optimizado y certificado para garantizar la máxima calidad en el reciclaje
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="process-step bg-white rounded-2xl p-6 shadow-lg text-center">
+                    <div class="w-12 h-12 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                        1
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Recolección</h3>
+                    <p class="text-sm text-gray-600">Recolectamos el material plástico directamente en su ubicación</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step bg-white rounded-2xl p-6 shadow-lg text-center">
+                    <div class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                        2
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Clasificación</h3>
+                    <p class="text-sm text-gray-600">Clasificamos por tipo de plástico y nivel de calidad</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step bg-white rounded-2xl p-6 shadow-lg text-center">
+                    <div class="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                        3
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Procesamiento</h3>
+                    <p class="text-sm text-gray-600">Triturado y pelletizado con tecnología avanzada</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-step bg-white rounded-2xl p-6 shadow-lg text-center">
+                    <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                        4
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Entrega</h3>
+                    <p class="text-sm text-gray-600">Material listo para reutilización industrial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-emerald-600 to-emerald-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                        ¿Listo para reciclar?
+                    </h2>
+                    <p class="text-xl text-emerald-100 mb-8">
+                        Nuestro equipo está preparado para apoyar en todas tus necesidades de reciclaje. 
+                        Contáctanos para recibir una cotización personalizada.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="contacto.html" class="bg-white text-emerald-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all text-center">
+                            Solicitar Cotización
+                        </a>
+                        <a href="productos.html" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-hover:text-emerald-600 transition-all text-center">
+                            Ver Productos
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/drive/_nuestros servicios_.jpeg" alt="Ilustración reciclaje" class="w-full max-w-md mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Logo and description -->
+                <div class="col-span-1">
+                    <img src="/drive/logo.png" alt="ALRA PLASTIC" class="h-12 mb-6">
+                    <p class="text-gray-400 mb-6">
+                        Empresa orgullosamente mexicana especializada en la recolección, reciclaje y venta de productos plásticos.
+                    </p>
+                    <div class="flex space-x-4">
+                        <div class="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold">♻️</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">10 años</p>
+                            <p class="text-gray-400 text-sm">Reciclando</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu links -->
+                <div class="col-span-1">
+                    <h3 class="text-lg font-bold mb-6">Menú</h3>
+                    <div class="space-y-4">
+                        <a href="index.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Inicio
+                        </a>
+                        <a href="nosotros.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Nosotros
+                        </a>
+                        <a href="servicios.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Servicios
+                        </a>
+                        <a href="productos.html" class="block text-emerald-400 font-semibold border-l-2 border-emerald-500 pl-4">
+                            Productos
+                        </a>
+                        <a href="contacto.html" class="block text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-emerald-500 pl-4">
+                            Contacto
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact info -->
+                <div class="col-span-1">
+                    <h3 class="text-lg font-bold mb-6">Contacto</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 bg-emerald-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">+52 (844) 144-7725</p>
+                                <p class="text-gray-400 text-sm">Lun - Vie 8AM - 5PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 bg-emerald-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">info@alraplastic.com</p>
+                                <p class="text-gray-400 text-sm">Respuesta en 24hrs</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 bg-emerald-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">Ramos Arizpe, Coahuila</p>
+                                <p class="text-gray-400 text-sm">Paseo de los Encinos #305, Fracc. Torremolinos, C.P 25903</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom footer -->
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 ALRA PLASTIC. Todos los derechos reservados.
+                    </p>
+                    <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                        <span class="text-gray-400 text-sm">Orgullosamente mexicana</span>
+                        <div class="w-6 h-4 bg-gradient-to-r from-green-500 via-white to-red-500 rounded-sm"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menu-button');
+        const closeButton = document.getElementById('close-button');
+        const mobileNav = document.getElementById('mobile-nav-links');
+
+        menuButton.addEventListener('click', () => {
+            mobileNav.classList.remove('hidden');
+            menuButton.classList.add('hidden');
+            closeButton.classList.remove('hidden');
+        });
+
+        closeButton.addEventListener('click', () => {
+            mobileNav.classList.add('hidden');
+            menuButton.classList.remove('hidden');
+            closeButton.classList.add('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
   </body>
 </html>
